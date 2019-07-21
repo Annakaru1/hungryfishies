@@ -8,6 +8,7 @@ class PlacesController < ApplicationController
   
   def new
     @place = Place.new
+    @caption = Caption.new
   end
 
   def create
@@ -22,6 +23,8 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     @comment = Comment.new
+    @photo = Photo.new
+
   end
   
   def edit

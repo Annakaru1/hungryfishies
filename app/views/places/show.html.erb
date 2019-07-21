@@ -80,6 +80,7 @@
     Add a comment
   </button>
 </div>
+
 <div class="clear"></div>
 
 <div class="row">
@@ -91,7 +92,24 @@
         <% end %>
         <%= comment.message %>
         <small><%= comment.user.email %></small>
-      </blockquote>
+      <blockquote>
     </div>
   <% end %>
+</div>
+
+<div>
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Add a caption", class: 'btn btn-primary' %>
+</div>
+  <div>
+    <% @place.photos.each do |photo| %>
+    <% end %>
+  </div>
+<%end%>
+
+<div class="row">
+  <%= @photo.picture.url%>
+  <%= image_tag '@photo.picture.url', class: 'img-fluid' %>
 </div>

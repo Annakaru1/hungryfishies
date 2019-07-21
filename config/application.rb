@@ -22,6 +22,8 @@ module Nomster
     #Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .tff )
 
+    require 'carrierwave'
+    require 'carrierwave/orm/activerecord'
 
   end
 end
