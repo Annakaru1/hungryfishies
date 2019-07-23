@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
 
   def show
     @caption = Caption.new
+    @picture = Picture.new
   end
 
   def photo_params
