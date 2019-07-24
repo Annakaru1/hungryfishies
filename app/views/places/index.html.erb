@@ -8,6 +8,17 @@
       <small><%= place.user.email %></small>
     <% end %>
 
+
+
+    <% if place.photos.present? %>
+      <div class="photos-index float-right">
+        <%= image_tag place.photos.first.picture, class: 'index-image-size' %>
+        </div>
+    <% end %>
+
+
+
+
     <% if place.comments.present? %>
       <div class="col-12">
         <blockquote>
