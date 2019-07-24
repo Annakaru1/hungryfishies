@@ -8,16 +8,11 @@
       <small><%= place.user.email %></small>
     <% end %>
 
-
-
     <% if place.photos.present? %>
       <div class="photos-index float-right">
-        <%= image_tag place.photos.first.picture, class: 'index-image-size' %>
+        <%= image_tag place.photos.first.picture.url.to_s, class: 'index-image-size' %>
         </div>
     <% end %>
-
-
-
 
     <% if place.comments.present? %>
       <div class="col-12">

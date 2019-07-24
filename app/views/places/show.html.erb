@@ -107,7 +107,7 @@
 <div>
   <% @place.photos.each do |photo| %>
     <blockquote>
-    <%= image_tag photo.picture, class: 'show-image-size' %>
+    <%= image_tag photo.picture.url.to_s, class: 'show-image-size' %>
     <p><% if photo.caption.present? %>
             <%= photo.caption %></p>
   <% end %>
